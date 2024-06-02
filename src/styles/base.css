@@ -1,0 +1,42 @@
+@layer base {
+  :root {
+    --color-bkg: 80deg 69.23% 94.9%;
+    --color-content: 210deg 28.75% 31.4%;
+    --color-accent1: 160deg 100% 37.1%;
+    --color-accent2: 183deg 53.41% 48.8%;
+  }
+
+  :root[data-theme='dark'] {
+    --color-bkg: 210deg 28.75% 31.4%;
+    --color-content: 80deg 69.23% 94.9%;
+    --color-accent1: 160deg 100% 37.1%;
+    --color-accent2: 183deg 53.41% 48.8%;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+  }
+
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply transition-all duration-1000;
+    transition:
+      color 1s,
+      background-color 1s;
+  }
+
+  #app {
+    max-width: 1280px;
+    margin: 0 auto;
+    /* padding: 2rem; */
+    font-weight: normal;
+    min-height: 100%;
+    /* height: 100%; */
+  }
+}

@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+
+@import 'tailwindcss/base';
+@import './styles/base.css';
+
+@import 'tailwindcss/components';
+@import './styles/components.css';
+
+@import 'tailwindcss/utilities';
+@import './styles/utilities.css';

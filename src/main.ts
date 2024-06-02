@@ -1,5 +1,6 @@
-import './assets/main.css'
 import PrimeVue from 'primevue/config'
+// import Lara from './presets/lara'
+import './index.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'

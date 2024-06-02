@@ -1,0 +1,37 @@
+@layer components {
+  .icon {
+    display: flex;
+    place-items: center;
+    place-content: center;
+    width: 32px;
+    height: 32px;
+    color: var(--vt-c-indigo);
+  }
+
+  .link {
+    text-decoration: underline;
+    transition: 0.4s;
+    padding: 3px;
+  }
+
+  /* a,
+.green {
+  text-decoration: none;
+  color: var(--color-green);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+} */
+
+  /* @media (hover: hover) {
+    .link:hover {
+      background-color: #00bd7e33;
+      font-weight: 500;
+    }
+  } */
+}
