@@ -8,6 +8,12 @@ import App from './App.vue'
 
 const app = createApp(App)
 
-app.use(PrimeVue, createPinia())
+app.use(
+  PrimeVue,
+  {
+    unstyled: true
+  },
+  createPinia()
+)
 
 app.mount('#app')

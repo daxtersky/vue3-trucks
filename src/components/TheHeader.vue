@@ -23,7 +23,7 @@ defineProps<{
     <!-- text-v-tropical-teal -->
     <a class="link" href="https://tailwindcss.com/" target="_blank" rel="noopener">Tailwind CSS</a>
     +
-    <s>Pinia</s>
+    <a class="link" href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>
     +
     <s>Vitest</s>
     +
