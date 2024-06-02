@@ -11,7 +11,7 @@ defineProps<{
   </h1>
   <h3 class="text-lg">
     <!-- text-v-tropical-teal -->
-    ERP sytem management build with:
+    ERP system management build with:
     <a class="link" href="https://pnpm.io/" target="_blank" rel="noopener">pnpm</a>
     <!-- text-v-tropical-teal -->
     +
