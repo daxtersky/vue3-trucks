@@ -2,7 +2,7 @@
 import TheHeader from './TheHeader.vue'
 import TheWelcome from './TheWelcome.vue'
 import TheFooter from './TheFooter.vue'
-// import DeviceInfo from './DeviceInfo.vue'
+import DeviceInfo from './DeviceInfo.vue'
 </script>
 
 <template>
@@ -18,9 +18,9 @@ import TheFooter from './TheFooter.vue'
     <main class="flex-1" style="border: 1px solid red">
       <TheWelcome />
     </main>
-    <!-- <aside style="border: 1px solid brown">
+    <aside style="border: 1px solid brown">
       <DeviceInfo />
-    </aside> -->
+    </aside>
 
     <footer style="border: 1px solid red">
       <TheFooter />
