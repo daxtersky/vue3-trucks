@@ -31,12 +31,17 @@ onUnmounted(() => window.removeEventListener('resize', onWidthChange))
 </script>
 
 <template>
-  <h3>Device info:</h3>
-  <p class="text-xs"><strong>Dark mode:</strong> {{ darkModeModel }}</p>
-  <p class="text-xs"><strong>App size width:</strong> {{ screenSize }} px</p>
-  <p class="text-xs"><strong>Tailwind screen type:</strong> {{ tailwindScreenType }}</p>
-  <div>
-    <input type="checkbox" name="dark" id="dark" v-model="darkModeModel" v-on:change="changeDarkMode" />
-    <label class="pl-2 select-none" for="dark">Dark mode</label>
+  <div class="text-bkg bg-accent-2 rounded-md p-2 flex flex-row">
+    <!-- align-items-center text-sm desktop:flex-col desktop:items-start -->
+    <div>
+      <h3 class="font-bold mr-4">Device info</h3>
+      <p class="text-xs mr-2"><strong>Dark mode:</strong> {{ darkModeModel }}</p>
+      <p class="text-xs mr-2"><strong>App size width:</strong> {{ screenSize }} px</p>
+      <p class="text-xs mr-2"><strong>Tailwind screen type:</strong> {{ tailwindScreenType }}</p>
+    </div>
+    <div class="h-full bg-content flex items-center p-2 rounded hover:cursor-pointer">
+      <input type="checkbox" name="dark" id="dark" v-model="darkModeModel" v-on:change="changeDarkMode" />
+      <label class="pl-2 select-none" for="dark">Dark mode</label>
+    </div>
   </div>
 </template>

@@ -25,6 +25,7 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
     @apply transition-all duration-1000;
     transition:
       color 1s,
