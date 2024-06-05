@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TheHeader from './TheHeader.vue'
-import TheWelcome from './TheWelcome.vue'
+import TheList from './TheList.vue'
 import TheFooter from './TheFooter.vue'
 import DeviceInfo from './DeviceInfo.vue'
 </script>
@@ -15,14 +15,14 @@ import DeviceInfo from './DeviceInfo.vue'
       </div>
     </header>
 
-    <main class="flex-1" style="border: 1px solid red">
-      <TheWelcome />
+    <main class="flex-1">
+      <TheList />
     </main>
-    <aside style="border: 1px solid brown">
+    <aside>
       <DeviceInfo />
     </aside>
 
-    <footer style="border: 1px solid red">
+    <footer>
       <TheFooter />
     </footer>
   </div>
