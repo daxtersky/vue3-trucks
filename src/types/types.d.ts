@@ -2,6 +2,7 @@ type TailwindScreensConfig = {
   [key: string]: string
 }
 
+// // https://stackoverflow.com/questions/38335668/how-to-refer-to-typescript-enum-in-d-ts-file-when-using-amd/48159049#48159049
 type TruckStatus = { [s: string]: string }
 
 interface TruckBase {
@@ -12,10 +13,13 @@ interface TruckBase {
 }
 
 interface Truck extends TruckBase {
-  id: number | string
+  id: string | number
 }
 
 interface TrucksState {
   trucks: Truck[]
   loading: boolean
+  isFormOpen: boolean
+  isFormEdit: boolean
+  truckForm: Partial<Truck> // | TruckBase
 }

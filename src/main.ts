@@ -5,6 +5,7 @@ import './index.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
+import vSelect from 'vue-select'
 
 const app = createApp(App)
 
@@ -15,5 +16,5 @@ app.use(
   // },
   createPinia()
 )
-
+app.component('v-select', vSelect)
 app.mount('#app')

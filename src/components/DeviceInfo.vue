@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, reactive, computed, ref, watch } from 'vue'
-import * as DOM from '../utils/dom.ts'
+import * as DOM from '../utils/dom'
 import { prefersDarkMode } from '../utils/window'
-import { getScreenTypeByScreenWidth } from '../utils/methods.ts'
+import { getScreenTypeByScreenWidth } from '../utils/methods'
 import tailwindConfig from '../../tailwind.config'
 
 let screenSize = ref(window.innerWidth)

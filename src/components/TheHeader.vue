@@ -29,4 +29,12 @@ defineProps<{
     +
     <s>Playwright</s>
   </h3>
+  <h4 class="">
+    Links:
+    <a class="link hover:text-bkg hover:bg-accent-2 rounded" target="_blank" href="https://github.com/daxtersky/vue3-trucks">Repo link</a>
+    +
+    <a class="link hover:text-bkg hover:bg-accent-2 rounded" target="_blank" href="http://qa-api-mock-3.eu-central-1.elasticbeanstalk.com/"
+      >API docs</a
+    >
+  </h4>
 </template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useTrucksStore } from '../stores/trucks'
-
 import TheItem from './TheItem.vue'
+
 const store = useTrucksStore()
 store.getTrucks()
 </script>

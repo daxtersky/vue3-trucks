@@ -1,8 +1,19 @@
 <script setup lang="ts">
 import TheHeader from './TheHeader.vue'
 import TheList from './TheList.vue'
-// import TheFooter from './TheFooter.vue'
+import TheForm from './TheForm.vue'
 import DeviceInfo from './DeviceInfo.vue'
+// import TheFooter from './TheFooter.vue'
+import { useTrucksStore } from '../stores/trucks'
+import { storeToRefs } from 'pinia'
+const store = useTrucksStore()
+const { isFormOpen } = storeToRefs(store)
+
+const newClick = () => {
+  console.info('1 newclick')
+  store.setTruckForm()
+  store.openForm()
+}
 </script>
 
 <template>
@@ -19,12 +30,24 @@ import DeviceInfo from './DeviceInfo.vue'
       <TheList />
     </main>
 
-    <aside class="col-span-6 desktop:col-span-1">
+    <aside class="col-span-6 flex desktop:block desktop:col-span-1">
+      <div class="mb-2 flex items-center h-[40px]">
+        <button
+          :disabled="isFormOpen"
+          class="disabled:opacity-75 bg-content p-2 mr-4 text-bkg hover:text-bkg hover:bg-accent-1 rounded"
+          @click="() => newClick()"
+        >
+          New truck
+        </button>
+      </div>
       <DeviceInfo />
     </aside>
 
-    <!-- <footer class="col-span-6">
+    <!-- <footer class="">
       <TheFooter />
     </footer> -->
   </div>
+  <Teleport to="body">
+    <TheForm />
+  </Teleport>
 </template>
