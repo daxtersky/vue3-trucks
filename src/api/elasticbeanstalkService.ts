@@ -5,6 +5,7 @@ async function fetchTrucks(endpoint: string): Promise<Truck[] | undefined> {
     const res = await fetch(`${URL}${endpoint}`, {
       method: 'GET',
       mode: 'cors',
+      referrerPolicy: 'unsafe-url',
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'
@@ -22,6 +23,7 @@ async function putTruck(endpoint: string, truck: Truck): Promise<Truck[] | undef
     const res = await fetch(`${URL}${endpoint}/${truck.id}`, {
       method: 'PUT',
       mode: 'cors',
+      referrerPolicy: 'unsafe-url',
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'
