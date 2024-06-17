@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { v4 as uuid } from 'uuid'
 import { URL } from '../constants/constants'
 // import { uniqueNumber } from '../utils/methods'
+import { fetchTrucks, putTruck } from '../api/elasticbeanstalkService'
 
 export const useTrucksStore = defineStore('trucksStore', {
   state: (): TrucksState => ({
@@ -26,18 +27,10 @@ export const useTrucksStore = defineStore('trucksStore', {
     async getTrucks() {
       try {
         this.loading = true
-        const res = await fetch(URL + 'trucks', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
-        if (res.ok) {
-          const data = await res.json()
-          this.trucks = data as Truck[]
-        }
+        const result = await fetchTrucks('trucks')
+        this.trucks = result || this.trucks
       } catch (error) {
-        console.info('err', error)
+        console.info('Error loading data:', error)
       } finally {
         this.loading = false
       }
@@ -49,19 +42,10 @@ export const useTrucksStore = defineStore('trucksStore', {
       }
       try {
         this.loading = true
-        const res = await fetch(URL + 'trucks/' + editedTruck.id, {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(editedTruck)
-        })
-        if (res.ok) {
-          const data = await res.json()
-          this.trucks = data as Truck[]
-        }
+        const result = await putTruck('trucks', editedTruck)
+        this.trucks = result || this.trucks
       } catch (error) {
-        console.info('err', error)
+        console.info('Error editing data:', error)
       } finally {
         this.loading = false
         this.getTrucks()
