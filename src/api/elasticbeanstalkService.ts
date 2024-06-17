@@ -4,8 +4,10 @@ async function fetchTrucks(endpoint: string): Promise<Truck[] | undefined> {
   try {
     const res = await fetch(`${URL}${endpoint}`, {
       method: 'GET',
+      mode: 'cors',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
       }
     })
     return res.ok ? ((await res.json()) as Truck[]) : undefined
@@ -19,8 +21,10 @@ async function putTruck(endpoint: string, truck: Truck): Promise<Truck[] | undef
   try {
     const res = await fetch(`${URL}${endpoint}/${truck.id}`, {
       method: 'PUT',
+      mode: 'cors',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify(truck)
     })
